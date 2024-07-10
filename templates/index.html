@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цени на Парфюми</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Цени на Парфюми</h1>
+    </header>
+    <div class="container">
+        <div class="input-group">
+            <input type="text" id="searchBar" placeholder="Ключова дума за парфюм...">
+            <input type="number" id="limitInput" placeholder="Брой резултати" min="1">
+            <button onclick="searchPerfume()">Търси</button>
+        </div>
+        <div class="results-container" style="display: none;">
+            <div class="results" id="douglas-results">
+                <h2>Douglas</h2>
+            </div>
+            <div id="comparison-section" class="comparison-section">
+                <h3>Сравнение</h3>
+                <div id="comparison-result"></div>
+            </div>
+            <div class="results" id="parfum-bg-results">
+                <h2>Parfum BG</h2>
+            </div>
+        </div>
+        <button id="homeButton" onclick="goHome()" style="display: none;">Начало</button>
+    </div>
+</body>
+</html>
